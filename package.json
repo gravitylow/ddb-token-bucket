@@ -1,0 +1,41 @@
+{
+  "name": "ddb-token-bucket",
+  "version": "1.0.0",
+  "description": "A generic TokenBucket implementation using DynamoDB",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "Adam Fendley",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gravitylow/ddb-token-bucket.git"
+  },
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build",
+    "test": "npx jest -i",
+    "test:coverage": "npx jest -i --coverage && open coverage/index.html",
+    "test:watch": "npx jest -i --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "@aws-sdk/util-dynamodb": "^3.0.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.946.0",
+    "@aws-sdk/lib-dynamodb": "^3.946.0",
+    "@aws-sdk/util-dynamodb": "^3.946.0",
+    "@shelf/jest-dynamodb": "^3.5.0",
+    "@tsconfig/recommended": "^1.0.13",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}
